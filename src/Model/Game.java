@@ -16,8 +16,8 @@ public class Game {
     private Set<Integer> oVals;
     private String winner;
 
-    // creates new game
-    // EFFECTS: Constructs a game.
+    // Creates new game
+    // EFFECTS: Constructs a new game.
     public Game() {
         currentPlayer = 1;
 
@@ -53,6 +53,10 @@ public class Game {
         return locations.get(index);
     }
 
+    // Effects after the move a player makes.
+    // REQUIRES: Position is from 1-9. The user does not input this value directly, so no exception handling.
+    // MODIFIES: this
+    // EFFECTS: Updates the status of the game after a player makes a move.
     public void playerMove(int position) {
 
         if (currentPlayer == 1 && locations.get(position - 1).length() == 0) {
@@ -70,6 +74,11 @@ public class Game {
         }
     }
 
+    // Checks whether the game is over.
+    // MODIFIES: this
+    // EFFECTS: Returns a boolean value that specifies whether the game is over not. Does this by checking
+    // all the possible win conditions. If the game is over, updates the winner. If the game is over, but there
+    // is no winner, then specifies the winner is a draw.
     public boolean IsOver() {
 
         if     (xVals.contains(1) && xVals.contains(2) && xVals.contains(3) ||

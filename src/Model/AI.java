@@ -1,5 +1,7 @@
 package Model;
 
+//In progress. Will commit changes as progress is made.d
+
 public class AI {
 
     private Game currentGame;

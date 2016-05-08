@@ -65,7 +65,8 @@ public class TicTacToe extends JFrame {
     public void isGameOver() {
         if (game.IsOver() && !game.getWinner().equals("Draw")) {
             JOptionPane.showMessageDialog(null, "Game is over. " + game.getWinner() + " has won", "Good Game", JOptionPane.PLAIN_MESSAGE);
-        } else if (game.IsOver() && game.getWinner().equals("Draw")) {
+        }
+        else if (game.IsOver() && game.getWinner().equals("Draw")) {
             JOptionPane.showMessageDialog(null, "Game is a draw. ", "Good Game", JOptionPane.PLAIN_MESSAGE);
         }
     }
@@ -78,7 +79,8 @@ public class TicTacToe extends JFrame {
             button.setText("X");
             button.setBackground(Color.yellow);
             game.playerMove(num);
-        } else if (button.getText().equals("") && game.getCurrentPlayer() == 2) {
+        }
+        else if (button.getText().equals("") && game.getCurrentPlayer() == 2) {
             button.setText("O");
             button.setBackground(Color.cyan);
             game.playerMove(num);

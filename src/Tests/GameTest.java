@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
+// In the process of adding additional tests.
+
 public class GameTest {
 
     private Game testGame;

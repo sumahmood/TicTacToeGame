@@ -1,6 +1,6 @@
 package Model;
 
-//In progress. Will commit changes as progress is made.d
+//In progress. Will commit changes as progress is made.
 
 public class AI {
 
